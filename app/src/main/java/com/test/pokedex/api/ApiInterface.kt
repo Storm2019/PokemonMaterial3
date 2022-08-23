@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface ApiInterface {
 
-//    @GET ("pokemon/?limit=400&offset=60")
-    @GET ("pokemon/")
+    @GET ("pokemon/?limit=400&offset=60")
+//    @GET ("pokemon/")
     suspend fun getPokemon() : Response<Pokemon>
 }

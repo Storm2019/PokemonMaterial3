@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation">
+
+    <dialog
+        android:id="@+id/itemListDialogFragment"
+        android:name="com.test.pokedex.presentation.ui.ItemListDialogFragment"
+        android:label="fragment_pokemon_list_dialog"
+        tools:layout="@layout/fragment_pokemon_list_dialog" >
+        <action
+            android:id="@+id/action_itemListDialogFragment_to_pokemonList"
+            app:destination="@id/pokemonList" />
+    </dialog>
+    <fragment
+        android:id="@+id/pokemonList"
+        android:name="com.test.pokedex.PokemonList"
+        android:label="fragment_pokemon_list"
+        tools:layout="@layout/fragment_pokemon_list" >
+        <action
+            android:id="@+id/action_pokemonList_to_itemListDialogFragment"
+            app:destination="@id/itemListDialogFragment" />
+    </fragment>
+</navigation>
